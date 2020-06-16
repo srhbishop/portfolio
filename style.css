@@ -1,0 +1,229 @@
+body {
+    margin:0;
+    font-family: 'Roboto Mono', monospace;
+    box-sizing:border-box;
+    background-color:rgb(255, 255, 255);
+}
+
+.nav-links {
+    position:fixed;
+    display:inline-flex;
+    justify-content:space-around;
+    background-color:#e6e6e6;
+    width:70%;
+    padding-left:30%;
+    z-index: 20;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #3a6e9e;
+    transition: all 0.3s ease;
+}
+
+#navbar p a {
+    text-decoration:none;
+    color:black;
+    font-size:1.2em;
+}
+
+#navbar p a:hover {
+    color: #3a6e9e;
+    transition:0.5s;
+}
+
+#welcome-section {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("images/header.JPG");
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.welcome-text {
+    width: 50vw;
+    margin-left: 50px;
+    margin-top: 150px;
+    opacity: 0;
+    transform: translateY(-25px);
+    font-size: 1.1rem;
+}
+
+#header-text {
+    text-transform:uppercase;
+    font-size: 5rem;
+}
+
+/* fades in .welcome-text in on window load */
+.fade {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: .8s ease-in;
+}
+
+#about, #services, #projects {
+    height: 100vh;
+    margin: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about h2, #services h2, #projects h2 {
+    color: #3a6e9e;
+}
+
+#services i {
+    color: #3a6e9e;
+}
+
+#services a {
+    color: #3a6e9e;
+    font-size: 1.1rem;
+    transition: .5s;
+}
+
+#services a:hover {
+    font-size: 1.3rem;
+}
+
+#projects ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#projects li {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+
+#projects a {
+    color: black;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+#projects a:hover {
+    color: #4D6174;
+    font-size: 1.4rem;
+    
+}
+
+#contact {
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    font-size:25px;
+    background-color:#e6e6e6;
+    height: 150px;
+}
+
+#contact i {
+    margin-left:50px;
+    margin-right:50px;
+}
+
+#contact a {
+    color:black;
+    transition:0.5s ease-in-out;
+}
+
+#contact a:hover {
+    font-size:30px;
+    color: #3a6e9e;
+}
+
+@media only screen and (max-width:700px) {
+
+    #header-text {
+        font-size: 40px;
+    }
+
+    #about, #services, #projects {
+        min-height: 100vh;
+        margin-left: 25px;
+        margin-right: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* to prevent the header from hiding under the nav */
+    #services {
+        padding-top: 75px;
+    }
+
+    #contact {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+    }
+    
+    body {
+        overflow-x: hidden; /* prevents from scrolling to the overflow */
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        background-color: lightgray;
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        width: 100%;
+        transform: translateX(100%); /* moves whole container off the screen to the right */
+        transition: transform 0.5s ease-in; /* controls the transition from translateX(100%) to translateX(0) */
+    }
+
+    #navbar {
+        position: fixed;
+        background-color: lightgray;
+        width: 100%;
+        z-index: 20;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        margin: 7px;
+    }
+}
+
+/* classes activated in JS */
+
+.nav-links-active {
+    transform: translateX(0);
+    z-index: 20;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
