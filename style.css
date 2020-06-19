@@ -76,8 +76,15 @@ body {
     transition: .8s ease-in;
 }
 
-#about, #services, #projects {
-    height: 100vh;
+section h2 {
+    font-size: 2rem;
+}
+
+section p {
+    font-size: 1.3rem;
+}
+
+#about, #services {
     margin: 75px;
     display: flex;
     flex-direction: column;
@@ -94,12 +101,48 @@ body {
 
 #services a {
     color: #3a6e9e;
-    font-size: 1.1rem;
     transition: .5s;
 }
 
 #services a:hover {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+}
+
+#services h3 {
+    font-size: 1.5rem;
+}
+
+#projects {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.tile-container {
+    margin: 50px 0px 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.tile {
+    padding: 10px;
+    box-shadow: 0px 3px 3px 3px gray;
+    margin-bottom: 10px;
+    transition: .5s ease-in-out;
+}
+
+.tile:hover {
+    opacity: .7;
+}
+
+.tile-img {
+    width:300px;
+    height: 300px;
 }
 
 #projects ul {
@@ -120,11 +163,6 @@ body {
     transition: all .5s ease-in-out;
 }
 
-#projects a:hover {
-    color: #4D6174;
-    font-size: 1.4rem;
-    
-}
 
 #contact {
     display:flex;
@@ -150,24 +188,45 @@ body {
     color: #3a6e9e;
 }
 
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:769px) {
 
     #header-text {
         font-size: 40px;
     }
 
+    section h2 {
+        font-size: 1.5rem;
+    }
+    
+    section p {
+        font-size: 1rem;
+    }
+
     #about, #services, #projects {
-        min-height: 100vh;
-        margin-left: 25px;
-        margin-right: 25px;
+        margin: 0px 25px 0px 25px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-top: 100px;
     }
 
-    /* to prevent the header from hiding under the nav */
-    #services {
-        padding-top: 75px;
+
+    #services h3 {
+        font-size: 1.2rem;
+    }
+
+    .tile-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .tile-img {
+        width:280px;
+        height:280;
+        margin: 10px;
     }
 
     #contact {
