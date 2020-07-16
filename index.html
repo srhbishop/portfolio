@@ -27,12 +27,12 @@
       </div>
     </nav>
 
-    <section id="welcome-section">
+    <header id="welcome-section">
       <div class="welcome-text">
         <h1 id="header-text">Hello.</h1>
         <h2 id="subheader">I'm Sarah, web designer and front-end developer.</h2>
       </div>
-    </section>
+    </header>
 
     <section id="about">
       <h2>
@@ -172,34 +172,33 @@
             </div>
           </a>
         </div>
-
-
-
-
-<!--
-
-        <ul>
-          <li><a href="https://codepen.io/srhbishop/full/XWXXdqO" target="_blank">"Three Good Things": A Gratitude App</a></li>
-          <li><a href="http://sbmusicology.com/my-project_djembe/index.html" target="_blank">Sounds of the West African Djembe</a></li>
-          <li><a href="http://sbmusicology.com/my-project_music-map/index.html" target="_blank">A Music Map of East Africa (using Google Maps API)</a></li>
-          <li><a href="https://codepen.io/srhbishop/full/pojYwXj" target="_blank">An Lolcats Weather App</a></li>
-          <li><a href="http://sbmusicology.com" target="_blank" target="_blank">SB Musicology: An Archival Research Web Site</a></li>
-        </ul>
-
-    -->
     </section>
 
-    <section id="contact">
-      <a href="https://github.com/srhbishop" target="_blank" id="profile-link">
-            <i class="fab fa-github">  Github</i>
-      </a>
-      <a href="mailto:srhbishop57@gmail.com" target="_blank" id="email">
-          <i class="far fa-paper-plane">  Email</i>
-      </a>
-        <a href="https://twitter.com/srhbishop" target="_blank" id="profile-link">
-            <i class="fab fa-twitter">  Twitter</i>
-        </a>
-    </section>
+    <footer id="contact">
+      <h2>
+        Contact Me
+      </h2>
+      <div class="two-columns">
+          <form id="contact-form" method="POST" data-netlify="true">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone number" required>
+            <textarea placeholder="Your message" rows="7" required></textarea>
+            <input type="submit" value="Submit" id="submit-btn">
+          </form>
+          <div class="social-media-div">
+            <a href="https://github.com/srhbishop" target="_blank" id="profile-link">
+              <i class="fab fa-github">  Github</i>
+            </a>
+            <a href="mailto:srhbishop57@gmail.com" target="_blank" id="email">
+              <i class="far fa-paper-plane">  Email</i>
+          </a>
+          <a href="https://twitter.com/srhbishop" target="_blank" id="profile-link">
+              <i class="fab fa-twitter">  Twitter</i>
+          </a>
+          </div>
+        </div>
+    </footer>
   </div>
 
     <script src="app.js"></script>
