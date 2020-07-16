@@ -180,11 +180,11 @@
         Contact Me
       </h2>
       <div class="two-columns">
-          <form id="contact-form" method="POST" data-netlify="true">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="tel" placeholder="Phone number" required>
-            <textarea placeholder="Your message" rows="7" required></textarea>
+          <form id="contact-form" netlify>
+            <input type="text" name="name" id="name" placeholder="Name" required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="tel" name="phone" id="phone" placeholder="Phone number">
+            <textarea name="message" id="message" placeholder="Your message" rows="7" required></textarea>
             <input type="submit" value="Submit" id="submit-btn">
           </form>
           <div class="social-media-div">
